@@ -1,0 +1,79 @@
+
+nav {
+    background-color: #f0f0f0;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* Nav anchor */
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 1.5em;
+    font-weight: bold;
+}
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+/* Heading 1 */
+h1 {
+    font-size: 2rem;
+    color: #2a3a5a;
+    text-align: center;
+    margin: 1.5em 0 1em 0;
+}
+
+/* General img rule */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Main content area */
+main {
+    max-width: 840px;
+    margin: 0 auto 2em auto;
+    text-align: center;
+}
+
+/* Aside styling */
+aside {
+    width: 20rem;
+    margin: 1rem auto 2rem auto;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+}
+
+/* Aside image */
+aside img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto 1em auto;
+}
+
+/* Main image (profile) */
+main img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto 1em auto;
+}
+
+/* Paragraphs */
+p {
+    padding: 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+    padding: 1em 0 0 0;
+}
