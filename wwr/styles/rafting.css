@@ -20,7 +20,7 @@
 body {
   font-family: var(--body-font);
   color: var(--text-color);
-  background: var(--secondary-color);
+  background: var(--secondary-color); /* Consider var(--background-color) if #00FFFB is too bright */
   line-height: 1.6;
   padding-bottom: 2rem;
 }
@@ -30,20 +30,33 @@ header, main, footer {
   margin: 0 auto;
 }
 
+/* Header */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Logo auto width, nav takes rest */
+  align-items: center;
+  gap: 20px; /* Space between logo and navigation */
+  padding: 15px 0; /* Padding for header */
+  /* width: 840px; and margin: 0 auto; are inherited */
+}
+
 /* Logo */
 .logo {
-  display: block;
-  margin: 20px auto 0;
-  width: 170px;
+  /* display: block; -- not needed for grid item */
+  /* margin: 20px auto 0; -- overridden by grid alignment */
+  margin: 0; /* Reset margin */
+  width: 170px; /* Keep specified width */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Navigation */
 header nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; /* Aligns nav items to the start of the nav container */
   gap: 16px;
   font-size: 1rem;
-  margin: 12px 0 24px;
+  /* margin: 12px 0 24px; -- overridden by grid alignment */
+  margin: 0; /* Reset margin */
 }
 
 header nav a {
@@ -121,14 +134,16 @@ h2.history {
   margin: 36px 0 20px;
   letter-spacing: 0.03em;
   font-weight: 700;
+  text-align: center; /* Centered as per wireframe implication */
 }
 
 h2.adventure {
   color: var(--accent1-color);
   font-family: var(--heading-font);
-  font-size: 1.5rem;
-  margin: 30px 0 12px;
+  font-size: 1.5rem; /* Adjusted as per existing, wireframe title seems larger */
+  margin: 30px 0 20px; /* Adjusted margin for spacing */
   font-weight: 600;
+  text-align: center; /* Centered as per wireframe */
 }
 
 /* Text */
@@ -137,38 +152,106 @@ p {
   font-size: 1.05rem;
 }
 
+/* History Section */
+.history-section {
+    margin-bottom: 40px;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* text - image - text */
+    gap: 20px;
+    align-items: start; /* Aligns items at the start of their cell */
+}
+
+.history-content img {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: block; /* To allow margin auto if needed in other contexts */
+    margin: 0 auto; /* Center image if its column is wider */
+}
+
+.history-content p {
+    font-size: 0.95rem; /* Slightly smaller for fitting into columns */
+    line-height: 1.5;
+}
+
+
 /* Adventure Section */
+.adventure-awaits {
+    margin-bottom: 40px;
+}
+
+/* Generic section img styling - can be useful for other images in sections */
 section img {
-  width: 100%;
+  /* width: 100%; -- This might be too broad, handled by specific contexts below */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   margin-bottom: 6px;
 }
 
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Space between figures */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens if needed, before media query kicks in */
+}
+
+.adventure-gallery figure {
+    flex: 1 1 150px; /* Flex grow, shrink, and basis (minimum width before wrapping) */
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-gallery figure img {
+    width: 100%; /* Responsive within its figure container */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin-bottom: 8px; /* Space between image and caption */
+}
+
+.adventure-gallery figure figcaption {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+
 /* Footer */
 footer {
   margin-top: 40px;
   padding: 20px 0;
-  text-align: center;
+  /* text-align: center; -- Overridden by flex */
   background-color: rgba(255,255,255,0.3);
   border-top: 2px solid var(--accent2-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer p {
-  margin-bottom: 6px;
+  margin-bottom: 0; /* Reset margin as flex handles alignment */
   font-size: 0.95rem;
   color: #333;
+  /* text-align: left; -- Flex handles positioning */
 }
 
 /* Social Media */
 .socialmedia {
-  margin-top: 8px;
+  /* margin-top: 8px; -- Reset margin */
+  margin-top: 0;
+  display: flex; /* Ensures horizontal layout of icons */
+  gap: 10px; /* Space between icons */
 }
 
 .socialmedia a {
   text-decoration: none;
-  margin-right: 10px;
+  /* margin-right: 10px; -- Replaced by gap on parent */
+  margin-right: 0;
 }
 
 .socialmedia img {
@@ -188,8 +271,24 @@ footer p {
   header, main, footer {
     width: 95%;
   }
+
+  header {
+    grid-template-columns: 1fr; /* Stack logo and nav */
+    text-align: center;
+  }
+
+  .logo {
+    margin: 0 auto 10px; /* Center logo when stacked */
+  }
+
+  header nav {
+    justify-content: center; /* Center nav links when stacked */
+    flex-wrap: wrap; /* Allow nav items to wrap if too many */
+  }
+  
   .hero article {
-    width: 90%;
+    /* width: 90%; -- Already exists from user's CSS */
+    max-width: 90%; /* Ensure it's not wider than hero */
     left: 5%;
     font-size: 1rem;
     bottom: 10px;
@@ -201,5 +300,41 @@ footer p {
 
   h2.history {
     font-size: 2rem;
+  }
+
+  .history-content {
+    grid-template-columns: 1fr; /* Stack history content */
+    gap: 15px;
+  }
+
+  .history-content img {
+    width: 60%; /* Adjust image size for stacked layout */
+    max-width: 250px; /* Max size */
+    margin: 10px auto; /* Center image */
+  }
+
+  .adventure-gallery {
+    flex-direction: column; /* Stack adventure figures */
+    align-items: center; /* Center figures when stacked */
+  }
+
+  .adventure-gallery figure {
+    width: 80%; /* Or some other appropriate width when stacked */
+    max-width: 300px;
+    margin-bottom: 20px; /* Space between stacked figures */
+    flex-basis: auto; /* Reset flex-basis */
+  }
+
+  footer {
+    flex-direction: column; /* Stack footer items */
+    text-align: center; /* Re-center text for stacked items */
+  }
+
+  footer p {
+    margin-bottom: 10px; /* Add space when stacked */
+  }
+
+  .socialmedia {
+    justify-content: center; /* Center social media icons when stacked */
   }
 }
