@@ -6,7 +6,7 @@
   --heading-font: "Oswald", "AncizarSerif-Black", serif;
   --body-font: "Montserrat", "Roboto", sans-serif;
   --text-color: #1b1b1b;
-  --background-color: #f0f8f8;
+  --background-color: #f0f8f8; /* Light off-white background */
 }
 
 /* Reset */
@@ -20,7 +20,7 @@
 body {
   font-family: var(--body-font);
   color: var(--text-color);
-  background: var(--secondary-color); /* Consider var(--background-color) if #00FFFB is too bright */
+  background: var(--background-color); /* Changed for better contrast */
   line-height: 1.6;
   padding-bottom: 2rem;
 }
@@ -37,13 +37,10 @@ header {
   align-items: center;
   gap: 20px; /* Space between logo and navigation */
   padding: 15px 0; /* Padding for header */
-  /* width: 840px; and margin: 0 auto; are inherited */
 }
 
 /* Logo */
 .logo {
-  /* display: block; -- not needed for grid item */
-  /* margin: 20px auto 0; -- overridden by grid alignment */
   margin: 0; /* Reset margin */
   width: 170px; /* Keep specified width */
   height: auto; /* Maintain aspect ratio */
@@ -55,7 +52,6 @@ header nav {
   justify-content: flex-start; /* Aligns nav items to the start of the nav container */
   gap: 16px;
   font-size: 1rem;
-  /* margin: 12px 0 24px; -- overridden by grid alignment */
   margin: 0; /* Reset margin */
 }
 
@@ -134,16 +130,16 @@ h2.history {
   margin: 36px 0 20px;
   letter-spacing: 0.03em;
   font-weight: 700;
-  text-align: center; /* Centered as per wireframe implication */
+  text-align: center;
 }
 
 h2.adventure {
   color: var(--accent1-color);
   font-family: var(--heading-font);
-  font-size: 1.5rem; /* Adjusted as per existing, wireframe title seems larger */
-  margin: 30px 0 20px; /* Adjusted margin for spacing */
+  font-size: 1.5rem;
+  margin: 30px 0 20px;
   font-weight: 600;
-  text-align: center; /* Centered as per wireframe */
+  text-align: center;
 }
 
 /* Text */
@@ -161,32 +157,29 @@ p {
     display: grid;
     grid-template-columns: 1fr auto 1fr; /* text - image - text */
     gap: 20px;
-    align-items: start; /* Aligns items at the start of their cell */
+    align-items: start;
 }
 
 .history-content img {
-    width: 200px; /* Adjust as needed */
+    width: 200px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    display: block; /* To allow margin auto if needed in other contexts */
-    margin: 0 auto; /* Center image if its column is wider */
+    display: block;
+    margin: 0 auto;
 }
 
 .history-content p {
-    font-size: 0.95rem; /* Slightly smaller for fitting into columns */
+    font-size: 0.95rem;
     line-height: 1.5;
 }
-
 
 /* Adventure Section */
 .adventure-awaits {
     margin-bottom: 40px;
 }
 
-/* Generic section img styling - can be useful for other images in sections */
-section img {
-  /* width: 100%; -- This might be too broad, handled by specific contexts below */
+section img { /* More general styling for images within sections if not overridden */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -196,22 +189,22 @@ section img {
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
-    gap: 15px; /* Space between figures */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens if needed, before media query kicks in */
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .adventure-gallery figure {
-    flex: 1 1 150px; /* Flex grow, shrink, and basis (minimum width before wrapping) */
+    flex: 1 1 150px;
     margin: 0;
     text-align: center;
 }
 
 .adventure-gallery figure img {
-    width: 100%; /* Responsive within its figure container */
+    width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    margin-bottom: 8px; /* Space between image and caption */
+    margin-bottom: 8px;
 }
 
 .adventure-gallery figure figcaption {
@@ -220,13 +213,11 @@ section img {
     font-weight: 600;
 }
 
-
 /* Footer */
 footer {
   margin-top: 40px;
   padding: 20px 0;
-  /* text-align: center; -- Overridden by flex */
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.3); /* This is a semi-transparent white over the body's background */
   border-top: 2px solid var(--accent2-color);
   display: flex;
   justify-content: space-between;
@@ -234,23 +225,20 @@ footer {
 }
 
 footer p {
-  margin-bottom: 0; /* Reset margin as flex handles alignment */
+  margin-bottom: 0;
   font-size: 0.95rem;
-  color: #333;
-  /* text-align: left; -- Flex handles positioning */
+  color: #333; /* Dark gray text, should contrast well on the lightened body bg */
 }
 
 /* Social Media */
 .socialmedia {
-  /* margin-top: 8px; -- Reset margin */
   margin-top: 0;
-  display: flex; /* Ensures horizontal layout of icons */
-  gap: 10px; /* Space between icons */
+  display: flex;
+  gap: 10px;
 }
 
 .socialmedia a {
   text-decoration: none;
-  /* margin-right: 10px; -- Replaced by gap on parent */
   margin-right: 0;
 }
 
@@ -283,12 +271,11 @@ footer p {
 
   header nav {
     justify-content: center; /* Center nav links when stacked */
-    flex-wrap: wrap; /* Allow nav items to wrap if too many */
+    flex-wrap: wrap; 
   }
   
   .hero article {
-    /* width: 90%; -- Already exists from user's CSS */
-    max-width: 90%; /* Ensure it's not wider than hero */
+    max-width: 90%;
     left: 5%;
     font-size: 1rem;
     bottom: 10px;
@@ -303,38 +290,38 @@ footer p {
   }
 
   .history-content {
-    grid-template-columns: 1fr; /* Stack history content */
+    grid-template-columns: 1fr;
     gap: 15px;
   }
 
   .history-content img {
-    width: 60%; /* Adjust image size for stacked layout */
-    max-width: 250px; /* Max size */
-    margin: 10px auto; /* Center image */
+    width: 60%;
+    max-width: 250px;
+    margin: 10px auto;
   }
 
   .adventure-gallery {
-    flex-direction: column; /* Stack adventure figures */
-    align-items: center; /* Center figures when stacked */
+    flex-direction: column;
+    align-items: center;
   }
 
   .adventure-gallery figure {
-    width: 80%; /* Or some other appropriate width when stacked */
+    width: 80%;
     max-width: 300px;
-    margin-bottom: 20px; /* Space between stacked figures */
-    flex-basis: auto; /* Reset flex-basis */
+    margin-bottom: 20px;
+    flex-basis: auto;
   }
 
   footer {
-    flex-direction: column; /* Stack footer items */
-    text-align: center; /* Re-center text for stacked items */
+    flex-direction: column;
+    text-align: center;
   }
 
   footer p {
-    margin-bottom: 10px; /* Add space when stacked */
+    margin-bottom: 10px;
   }
 
   .socialmedia {
-    justify-content: center; /* Center social media icons when stacked */
+    justify-content: center;
   }
 }
