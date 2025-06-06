@@ -325,3 +325,280 @@ footer p {
     justify-content: center;
   }
 }
+
+/* Add these to the existing rafting.css file */
+
+/* General Contact Page Styles */
+.contact-main {
+    padding: 20px 0;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 15px; /* Padding for text on smaller screens */
+}
+
+.contact-intro h1 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-size: 2.5rem; /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+.contact-intro p {
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+
+/* Contact Info & Map Section */
+.contact-info-section h2,
+.employee-profiles-section h2,
+.contact-form-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-size: 2rem; /* Adjust as needed */
+}
+
+.contact-details-map-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.contact-details {
+    flex: 1;
+    min-width: 280px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.contact-details h3 {
+    font-family: var(--heading-font);
+    margin-bottom: 15px;
+    color: var(--accent1-color);
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.contact-details p strong {
+    color: var(--text-color);
+}
+
+.contact-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Employee Profiles Section */
+.employee-profiles-section {
+    margin-bottom: 40px;
+    background-color: #f0f8f8;
+    padding: 30px 0;
+}
+
+.profiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.employee-profile {
+    flex-basis: 280px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.employee-profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+.employee-profile img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid var(--accent2-color);
+}
+
+.employee-profile figcaption {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.employee-profile figcaption em {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    font-style: normal;
+    display: block;
+}
+
+/* Contact Form Section */
+.contact-form-section form {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 30px 30px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form-section fieldset {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.contact-form-section legend {
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    color: var rgb(0, 0, 255);
+    font-family: var(--heading-font);
+}
+
+.contact-form-section label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.contact-form-section input[type="text"],
+.contact-form-section input[type="email"],
+.contact-form-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+.contact-form-section input[type="text"]:focus,
+.contact-form-section input[type="email"]:focus,
+.contact-form-section textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(35, 138, 0, 0.2); /* Focus indicator */
+    outline: none;
+}
+
+
+.contact-form-section .radio-list {
+    list-style: none;
+    padding-left: 0;
+}
+.contact-form-section .radio-list li {
+    margin-bottom: 10px;
+}
+
+.contact-form-section input[type="radio"],
+.contact-form-section input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+    width: auto;
+}
+.contact-form-section input[type="radio"] + label,
+.contact-form-section input[type="checkbox"] + label {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+.contact-form-section .checkbox-item {
+    margin-top: 10px;
+}
+
+
+.submit-btn {
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: auto;
+    margin: 20px auto 0;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover, .submit-btn:focus {
+    background-color: #c700d9;
+    transform: scale(1.03);
+}
+
+/* Footer Wireframe Link */
+.wireframe-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+/* Responsive Adjustments
+@media (max-width: 768px) {
+    .contact-details-map-flex {
+        flex-direction: column;
+    }
+
+    .contact-details, .map-container {
+        flex-basis: 100%;
+    }
+
+    .profiles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .employee-profile {
+        flex-basis: 80%;
+        max-width: 350px;
+    }
+
+    .contact-form-section form {
+        padding: 20px;
+    }
+}

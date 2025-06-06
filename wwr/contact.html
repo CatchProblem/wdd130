@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact White Water Rafting for your inquiries, reservations, or suggestions. Find our address, phone, email, and a contact form to reach us.">
+    <meta name="author" content="Opio Moses">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | WHITE WATER RAFTING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+<header>
+    <img src="images/wwr-logo.png" alt="Rafting Company Logo" class="logo">
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<main class="contact-main">
+    <section class="contact-intro">
+        <h1>GET IN TOUCH</h1>
+        <p>We'd love to hear from you! You have a question about our trips, a concern, or a suggestion? Please reach out! Our team is ready to assist you.</p>
+    </section>
+
+    <section class="contact-info-section">
+        <h2>OUR LOCATION AND CONTACT INFORMATION</h2>
+        <div class="contact-details-map-flex">
+            <div class="contact-details">
+                <h3>White Water Rafting Co.</h3>
+                <p><strong>Address:</strong><br>1000 Salaama Road<br>MUNYONYO, MULUNGU BEACH.Kampala, Uganda</p>
+                <p><strong>Phone:</strong> <a href="tel:+256761343925">+256 761343925</a></p>
+                <p><strong>Email:</strong> <a href="mailto:contact@whitewaterrafting.ug">contact@whitewaterrafting.ug</a></p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255347.02380619236!2d32.46987030629079!3d0.3130829980606675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbc0f7f768477%3A0x44757b920808997c!2sKampala%2C%20Uganda!5e0!3m2!1sen!2sus!4v1717500000000!5m2!1sen!2sus" width="100%" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="employee-profiles-section">
+        <h2>Meet Our Team</h2>
+        <div class="profiles-container">
+            <figure class="employee-profile">
+                <img src="images/employee1.jpg" alt="Img of Ma Cure">
+                <figcaption>Ma Cure<br><em>Lead River Guide</em></figcaption>
+            </figure>
+            <figure class="employee-profile">
+                <img src="images/employee2.jpg" alt="Img of Arike Flavia">
+                <figcaption>Arike Flave<br><em>Customer Experience Manager</em></figcaption>
+            </figure>
+            <figure class="employee-profile">
+                <img src="images/employee3.jpg" alt="Img of Catch Problems">
+                <figcaption>Catch Problems<br><em>Operations Coordinator</em></figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <h2>Send Us a Message</h2>
+        <form action="thankyou.html" method="post">
+            <fieldset>
+                <legend>Your Information</legend>
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="user_name" required>
+                </div>
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="user_email" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Purpose of Your Message</legend>
+                <ul class="radio-list">
+                    <li>
+                        <input type="radio" id="purpose_gi" name="purpose" value="General Inquiry" checked>
+                        <label for="purpose_gi">General Inquiry</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="purpose_rq" name="purpose" value="Reservation Question">
+                        <label for="purpose_rq">Reservation Question</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="purpose_ws" name="purpose" value="Website Suggestion">
+                        <label for="purpose_ws">Website Suggestion</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Message</legend>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="user_message" rows="6" required></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Newsletter Subscription</legend>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="newsletter" name="newsletter_subscribe" value="yes">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Send Your Message</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 ⚓ White Water Rafting Co. All rights reserved. ⚓ Opio Moses.</p>
+    <nav class="socialmedia" aria-label="Social media links">
+        <a href="https://facebook.com"><img src="images/facebook.svg" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="images/twitter.svg" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="images/instagram.svg" alt="Instagram"></a>
+    </nav>
+    <p><a href="images/contact-wireframe.pdf" target="_blank" class="wireframe-link">Contact Us Wireframe</a></p>
+</footer>
+</body>
+</html>
