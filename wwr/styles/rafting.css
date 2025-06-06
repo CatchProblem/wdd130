@@ -491,7 +491,7 @@ footer p {
     font-weight: 700;
     font-size: 1.2rem;
     padding: 0 10px;
-    color: var rgb(0, 0, 255);
+    color: rgb(0, 0, 255);
     font-family: var(--heading-font);
 }
 
