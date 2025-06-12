@@ -2,7 +2,7 @@
   --primary-color: #238A00;
   --secondary-color: #00FFFB;
   --accent1-color: #EA00FF;
-  --accent2-color: #E6AE06;
+  --accent2-color: blue;
   --heading-font: "Oswald", "AncizarSerif-Black", serif;
   --body-font: "Montserrat", "Roboto", sans-serif;
   --text-color: #1b1b1b;
@@ -56,7 +56,7 @@ header nav {
 }
 
 header nav a {
-  color: var(--accent1-color);
+  color: maroon;
   text-decoration: none;
   padding: 6px 10px;
   font-weight: 600;
@@ -601,4 +601,311 @@ footer p {
     .contact-form-section form {
         padding: 20px;
     }
+}
+
+
+
+
+/* Styling for Trips Page */
+.trips-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.trips-hero {
+    text-align: center;
+    background-color: #161748;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.trips-hero h1 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+.trips-hero p {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #28a745; /* Green button */
+    color: rgb(149, 0, 255);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #161748; /* Darker green button on hover */
+}
+
+
+.trip-descriptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.trip-descriptions h2 {
+    grid-column: 1 / -1; /* Span across all columns */
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.trip-card {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.trip-card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    padding: 0 15px;
+}
+
+.trip-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding: 0 15px;
+}
+
+.trip-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 15px;
+    text-align: left;
+}
+
+.trip-card ul li {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.trip-table-section {
+    margin-bottom: 50px;
+}
+
+.trip-table-section h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.table-container {
+    overflow-x: auto; /* Ensures table is scrollable on smaller screens */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.trip-table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Ensures table doesn't get too narrow */
+}
+
+.trip-table-section th,
+.trip-table-section td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.trip-table-section thead th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.trip-table-section tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.trip-table-section tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer specific styling for wireframe link on trips page */
+footer p:last-child a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p:last-child a:hover {
+    text-decoration: underline;
+}
+
+/* Existing styles for general elements like header, footer, navigation, and logo will remain the same as in your original rafting.css file. */
+
+
+
+
+
+/*-- Home Page Specific Styles --*/
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the heading perfectly */
+    color: #800000;
+    background-color: white; /* transparent background for readability */
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+}
+
+/* Home Page Grid Layout */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 40px 0;
+}
+
+.grid-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.grid-item h2 {
+    font-family: 'Oswald', sans-serif;
+    color: #333;
+}
+
+/* Newsletter Form Styles */
+.newsletter {
+    padding: 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.newsletter label {
+    font-weight: bold;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #1100ff;
+}
+
+/* Call to Action (CTA) Section */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: rgb(255, 0, 255);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: blue;
+    transform: translateY(-2px);
 }

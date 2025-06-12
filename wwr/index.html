@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Home page of the White Water Rafting company, your adventure starts here.">
+    <meta name="author" content="Opio Moses">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | White Water Rafting Co.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+
+<header>
+    <img src="images/wwr-logo.png" alt="Rafting Company Logo" class="logo">
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<main>
+    <div class="hero">
+        <img src="images/hero-image.jpg" alt="A thrilling white water rafting scene">
+        <h1>EXPERIENCE THE RUSH OF THE RIVERS.</h1>
+    </div>
+
+    <section class="home-grid">
+        <div class="grid-item purpose">
+            <img src="images/purpose.jpg" alt="Rafters working together as a team">
+            <h2>OUR PURPOSE</h2>
+            <p>We believe in the power of adventure to connect people with nature and with each other. Our mission is to provide safe, exhilarating rafting experiences that create lasting memories.</p>
+        </div>
+        <div class="grid-item offerings">
+            <img src="images/offerings.jpg" alt="A variety of rafting gear">
+            <h2>OUR OFFERS</h2>
+            <p>From gentle family floats to extreme whitewater challenges, we offer a range of trips to suit every skill level. All trips are led by our certified and experienced guides.</p>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Join Our Newsletter</h2>
+        <p>Sign up to receive the latest news, special offers, and adventure tips!</p>
+        <form action="subscribe.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="user_email" required>
+            
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    
+    <section class="cta">
+        <h2>Ready for Your Next Adventure?</h2>
+        <p>The rapids are calling. Don't wait to answer the call of the wild!</p>
+        <a href="trips.html" class="cta-button">View Our Trips</a>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 ⚓ White Water Rafting Co. All rights reserved. ⚓ Opio Moses.</p>
+    <nav class="socialmedia" aria-label="Social media links">
+        <a href="https://facebook.com"><img src="images/facebook.svg" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="images/twitter.svg" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="images/instagram.svg" alt="Instagram"></a>
+    </nav>
+</footer>
+
+</body>
+</html>
